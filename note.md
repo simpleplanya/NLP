@@ -31,3 +31,8 @@ Errr, 字典新增會跳錯誤 , 猜測是 vocab_size問題
 方向可以重create model 裡面開始, 他有bertconig引述
 bert.run_classifier.create_model()
 bert_config = bert.modeling.BertConfig.from_json_file('D:\\multi_cased_L-12_H-768_A-12\\bert_config.json')
+
+
+  
+config = bert.modeling.BertConfig(vocab_size=32000, hidden_size=512,
+    num_hidden_layers=8, num_attention_heads=6, intermediate_size=1024)
