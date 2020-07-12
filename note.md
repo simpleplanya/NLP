@@ -26,4 +26,8 @@ Errr, 字典新增會跳錯誤 , 猜測是 vocab_size問題
   "pooler_type": "first_token_transform", 
   "type_vocab_size": 2, 
   "vocab_size": 119547
-}
+}  
+
+方向可以重create model 裡面開始, 他有bertconig引述
+bert.run_classifier.create_model()
+bert_config = bert.modeling.BertConfig.from_json_file('D:\\multi_cased_L-12_H-768_A-12\\bert_config.json')
