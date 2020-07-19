@@ -34,5 +34,14 @@ bert_config = bert.modeling.BertConfig.from_json_file('D:\\multi_cased_L-12_H-76
 
 
   
+  
 config = bert.modeling.BertConfig(vocab_size=32000, hidden_size=512,
     num_hidden_layers=8, num_attention_heads=6, intermediate_size=1024)
+
+  
+載入tensorflow 模型方法
+https://stackoverflow.com/questions/41265035/tensorflow-why-there-are-3-files-after-saving-the-model/41273348#41273348?newreg=59e468a7cac64e83a03ebffbe953fe85  
+with tf.Session() as sess:
+    saver = tf.train.import_meta_graph('D:\\multi_cased_L-12_H-768_A-12\\bert_model.ckpt.meta')
+    saver.restore(sess, "D:\\multi_cased_L-12_H-768_A-12\\bert_model.ckpt")
+
